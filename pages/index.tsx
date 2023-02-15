@@ -1,9 +1,61 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
+
+  const [ firstNumber, setFirstNumber ] = useState<number>(0);
+  const [ secondNumber, setSecondNumber ] = useState<number>(0);
+  const [ thirdNumber, setThirdNumber ] = useState<number>(0);
+  const [ fourthNumber, setFourthNumber ] = useState<number>(0);
+  const [ fifthNumber, setFifthNumber ] = useState<number>(0);
+  const [ sixthNumber, setSixthNumber ] = useState<number>(0);
+
+  const numeroDaSorte = () => {
+    let numero = Math.floor(Math.random() * 61);
+    for(let i = numero; i == 0; i = numero){
+      numero = Math.floor(Math.random() * 61)
+    }
+    return numero;
+  }
+
+  const gerarNumeros = async () => {
+    let arr = []
+    let n1 = numeroDaSorte();
+    let n2 = numeroDaSorte();
+    let n3 = numeroDaSorte();
+    let n4 = numeroDaSorte();
+    let n5 = numeroDaSorte();
+    let n6 = numeroDaSorte();
+    if(n2 == n1){
+      n2++
+    }
+    if(n3 == n1 || n3 == n2) {
+      n3++
+    }
+    if(n4 == n1 || n4 == n2 || n4 == n3){
+      n4++
+    }
+    if(n5 == n1 || n5 == n2 || n5 == n3 || n5 == n4){
+      n5++
+    }
+    if(n6 == n1 || n6 == n2 || n6 == n3 || n6 == n4 || n6 == n5){
+      n6++
+    }
+    arr.push(n1, n2, n3, n4, n5, n6);
+    console.log(arr);
+
+
+    setFirstNumber(n1);
+    setSecondNumber(n2);
+    setThirdNumber(n3);
+    setFourthNumber(n4);
+    setFifthNumber(n5);
+    setSixthNumber(n6);
+
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,58 +65,14 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <input type="number" value={firstNumber}/>
+        <input type="number" value={secondNumber}/>
+        <input type="number" value={thirdNumber}/>
+        <input type="number" value={fourthNumber}/>
+        <input type="number" value={fifthNumber}/>
+        <input type="number" value={sixthNumber}/>
+        <button onClick={gerarNumeros}>gerar</button>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }
