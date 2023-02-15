@@ -65,16 +65,16 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <input type="number" value={firstNumber}/>
-        <input type="number" value={secondNumber}/>
-        <input type="number" value={thirdNumber}/>
-        <input type="number" value={fourthNumber}/>
-        <input type="number" value={fifthNumber}/>
-        <input type="number" value={sixthNumber}/>
-        <button onClick={gerarNumeros}>gerar</button>
+        <input type="text" onChange={() => {}} value={firstNumber}/>
+        <input type="text" value={secondNumber} onChange={() => {}}/>
+        <input type="text" value={thirdNumber} onChange={() => {}}/>
+        <input type="text" value={fourthNumber} onChange={() => {}}/>
+        <input type="text" value={fifthNumber} onChange={() => {}}/>
+        <input type="text" value={sixthNumber} onChange={() => {}}/>
       </main>
+      <button onClick={gerarNumeros}>Gerar</button>
     </div>
   )
 }
 
-export default Home
+export default Home;

@@ -1,15 +1,33 @@
 .container {
-  padding: 0 2rem;
-}
-
-.main {
   min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.main input{
+  border: 0;
+  width: 100px;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.container button{
+  width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
 }
 
 .footer {
