@@ -1,9 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState } from 'react'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
+import { dados } from '../data/data';
 
 const Home: NextPage = () => {
+
+  console.log(dados)
 
   const [ firstNumber, setFirstNumber ] = useState<number>(0);
   const [ secondNumber, setSecondNumber ] = useState<number>(0);
@@ -46,7 +49,6 @@ const Home: NextPage = () => {
     arr.push(n1, n2, n3, n4, n5, n6);
     console.log(arr);
 
-
     setFirstNumber(n1);
     setSecondNumber(n2);
     setThirdNumber(n3);
@@ -64,6 +66,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <header>
+      <h1>Meu Número da Sorte</h1>
+      </header>
+
       <main className={styles.main}>
         <input type="text" onChange={() => {}} value={firstNumber}/>
         <input type="text" value={secondNumber} onChange={() => {}}/>
@@ -72,7 +78,7 @@ const Home: NextPage = () => {
         <input type="text" value={fifthNumber} onChange={() => {}}/>
         <input type="text" value={sixthNumber} onChange={() => {}}/>
       </main>
-      <button onClick={gerarNumeros}>Gerar</button>
+      <button onClick={gerarNumeros}>Gerar Números</button>
     </div>
   )
 }
