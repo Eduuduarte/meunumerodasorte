@@ -1,10 +1,14 @@
+import { useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useState } from 'react'
 import styles from '../styles/Home.module.css';
+
+import { numeroDaSorte } from '../libs/randomNumber';
 import { dados } from '../data/data';
 
 const Home: NextPage = () => {
+
+  const random = numeroDaSorte();
 
   console.log(dados)
 
@@ -15,22 +19,22 @@ const Home: NextPage = () => {
   const [ fifthNumber, setFifthNumber ] = useState<number>(0);
   const [ sixthNumber, setSixthNumber ] = useState<number>(0);
 
-  const numeroDaSorte = () => {
-    let numero = Math.floor(Math.random() * 61);
-    for(let i = numero; i == 0; i = numero){
-      numero = Math.floor(Math.random() * 61)
-    }
-    return numero;
-  }
+  // const numeroDaSorte = () => {
+  //   let numero = Math.floor(Math.random() * 61);
+  //   for(let i = numero; i == 0; i = numero){
+  //     numero = Math.floor(Math.random() * 61)
+  //   }
+  //   return numero;
+  // }
 
   const gerarNumeros = async () => {
     let arr = []
-    let n1 = numeroDaSorte();
-    let n2 = numeroDaSorte();
-    let n3 = numeroDaSorte();
-    let n4 = numeroDaSorte();
-    let n5 = numeroDaSorte();
-    let n6 = numeroDaSorte();
+    let n1 = random.randomNumber();
+    let n2 = random.randomNumber();
+    let n3 = random.randomNumber();
+    let n4 = random.randomNumber();
+    let n5 = random.randomNumber();
+    let n6 = random.randomNumber();
     if(n2 == n1){
       n2++
     }
