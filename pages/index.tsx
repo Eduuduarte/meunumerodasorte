@@ -10,55 +10,42 @@ const Home: NextPage = () => {
 
   const random = numeroDaSorte();
 
-  console.log(dados)
+  const [firstNumber, setFirstNumber] = useState<number>(0);
+  const [secondNumber, setSecondNumber] = useState<number>(0);
+  const [thirdNumber, setThirdNumber] = useState<number>(0);
+  const [fourthNumber, setFourthNumber] = useState<number>(0);
+  const [fifthNumber, setFifthNumber] = useState<number>(0);
+  const [sixthNumber, setSixthNumber] = useState<number>(0);
 
-  const [ firstNumber, setFirstNumber ] = useState<number>(0);
-  const [ secondNumber, setSecondNumber ] = useState<number>(0);
-  const [ thirdNumber, setThirdNumber ] = useState<number>(0);
-  const [ fourthNumber, setFourthNumber ] = useState<number>(0);
-  const [ fifthNumber, setFifthNumber ] = useState<number>(0);
-  const [ sixthNumber, setSixthNumber ] = useState<number>(0);
-
-  // const numeroDaSorte = () => {
-  //   let numero = Math.floor(Math.random() * 61);
-  //   for(let i = numero; i == 0; i = numero){
-  //     numero = Math.floor(Math.random() * 61)
-  //   }
-  //   return numero;
-  // }
-
-  const gerarNumeros = async () => {
-    let arr = []
+  const gerarNumeros = () => {
     let n1 = random.randomNumber();
-    let n2 = random.randomNumber();
-    let n3 = random.randomNumber();
-    let n4 = random.randomNumber();
-    let n5 = random.randomNumber();
-    let n6 = random.randomNumber();
-    if(n2 == n1){
-      n2++
-    }
-    if(n3 == n1 || n3 == n2) {
-      n3++
-    }
-    if(n4 == n1 || n4 == n2 || n4 == n3){
-      n4++
-    }
-    if(n5 == n1 || n5 == n2 || n5 == n3 || n5 == n4){
-      n5++
-    }
-    if(n6 == n1 || n6 == n2 || n6 == n3 || n6 == n4 || n6 == n5){
-      n6++
-    }
-    arr.push(n1, n2, n3, n4, n5, n6);
-    console.log(arr);
+    let n2;
+    let n3;
+    let n4;
+    let n5;
+    let n6;
 
     setFirstNumber(n1);
-    setSecondNumber(n2);
-    setThirdNumber(n3);
-    setFourthNumber(n4);
-    setFifthNumber(n5);
-    setSixthNumber(n6);
+
+    do {
+      n2 = random.randomNumber();
+      n3 = random.randomNumber();
+      n4 = random.randomNumber();
+      n5 = random.randomNumber();
+      n6 = random.randomNumber();
+      
+      setSecondNumber(n2);
+      setThirdNumber(n3);
+      setFourthNumber(n4);
+      setFifthNumber(n5);
+      setSixthNumber(n6);
+    } while (
+      n1 === n2 &&
+       n1===n3 || n2 === n3 &&
+      n1===n4 || n2===n4 || n3===n4 &&
+      n1===n5 || n2===n5 || n3===n5 || n4===n5 &&
+      n1===n6 || n2===n6 || n3===n6 || n4===n6 || n5===n6
+    );
 
   }
 
@@ -71,16 +58,16 @@ const Home: NextPage = () => {
       </Head>
 
       <header>
-      <h1>Meu Número da Sorte</h1>
+        <h1>Meu Número da Sorte</h1>
       </header>
 
       <main className={styles.main}>
-        <input type="text" onChange={() => {}} value={firstNumber}/>
-        <input type="text" value={secondNumber} onChange={() => {}}/>
-        <input type="text" value={thirdNumber} onChange={() => {}}/>
-        <input type="text" value={fourthNumber} onChange={() => {}}/>
-        <input type="text" value={fifthNumber} onChange={() => {}}/>
-        <input type="text" value={sixthNumber} onChange={() => {}}/>
+        <input type="text" onChange={() => { }} value={firstNumber} />
+        <input type="text" value={secondNumber} onChange={() => { }} />
+        <input type="text" value={thirdNumber} onChange={() => { }} />
+        <input type="text" value={fourthNumber} onChange={() => { }} />
+        <input type="text" value={fifthNumber} onChange={() => { }} />
+        <input type="text" value={sixthNumber} onChange={() => { }} />
       </main>
       <button onClick={gerarNumeros}>Gerar Números</button>
     </div>
