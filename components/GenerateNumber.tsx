@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { numeroDaSorte } from '../libs/randomNumber';
 import styles from '../styles/Home.module.css';
+
+import { numeroDaSorte } from '../libs/randomNumber';
 
 const GenerateNumber = () => {
 
-
-const random = numeroDaSorte();
+  const random = numeroDaSorte();
 
   const [firstNumber, setFirstNumber] = useState<number>(0);
   const [secondNumber, setSecondNumber] = useState<number>(0);
@@ -45,15 +45,16 @@ const random = numeroDaSorte();
       n1===n6 || n2===n6 || n3===n6 || n4===n6 || n5===n6
     );
   }
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <input type="text" onChange={() => { }} value={firstNumber} />
-        <input type="text" value={secondNumber} onChange={() => { }} />
-        <input type="text" value={thirdNumber} onChange={() => { }} />
-        <input type="text" value={fourthNumber} onChange={() => { }} />
-        <input type="text" value={fifthNumber} onChange={() => { }} />
-        <input type="text" value={sixthNumber} onChange={() => { }} />
+        <p>{firstNumber}</p>
+        <p>{secondNumber}</p>
+        <p>{thirdNumber}</p>
+        <p>{fourthNumber}</p>
+        <p>{fifthNumber}</p>
+        <p>{sixthNumber}</p>
       </main>
       <button onClick={gerarNumeros}>Gerar Números</button>
     </div>
