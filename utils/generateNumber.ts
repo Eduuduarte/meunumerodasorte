@@ -1,5 +1,6 @@
 import { formatterNumber } from "../libs/formatter";
 import { numeroDaSorte } from "../libs/randomNumber";
+import { dados } from "../data/data";
 
 export const genarateNumber = () => {
     const random = numeroDaSorte();
@@ -46,7 +47,18 @@ export const genarateNumber = () => {
       n5 = numberArray[4];
       n6 = numberArray[5];
 
+      // n1 = "05"
+      // n2 = "23"
+      // n3 = "34"
+      // n4 = "45"
+      // n5 = "56"
+      // n6 = "57"
+
     const myNumber =`${n1} ${n2} ${n3} ${n4} ${n5} ${n6}`
+
+    const newArray = dados.filter(value => value.resultados == myNumber);
+
+    console.log(newArray)
 
     return myNumber;
 }
