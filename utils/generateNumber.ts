@@ -14,6 +14,7 @@ export const genarateNumber = () => {
     let n5;
     let n6;
 
+    // Verificar Repetição
     do {
         n1 = random.randomNumber();
         n2 = random.randomNumber();
@@ -36,7 +37,8 @@ export const genarateNumber = () => {
       n4 = numero.addZero(n4);
       n5 = numero.addZero(n5);
       n6 = numero.addZero(n6);
-
+      
+      // Ordenar os números sorteados
       numberArray.push(n1, n2, n3, n4, n5, n6);
       numberArray.sort();
       
@@ -47,15 +49,7 @@ export const genarateNumber = () => {
       n5 = numberArray[4];
       n6 = numberArray[5];
 
-      // n1 = "05"
-      // n2 = "23"
-      // n3 = "34"
-      // n4 = "45"
-      // n5 = "56"
-      // n6 = "57"
-
     const myNumber =`${n1} ${n2} ${n3} ${n4} ${n5} ${n6}`
-
 
     return myNumber;
 }

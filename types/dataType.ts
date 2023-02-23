@@ -1,5 +1,6 @@
 export type results = {
     "Sorteio": number;
     "Data": string;
-    "resultados": string
+    "resultados": string;
+    counts?: number
 }
