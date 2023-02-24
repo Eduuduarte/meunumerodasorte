@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css';
 
 import GenerateNumber from '../components/GenerateNumber';
+import Header from '../components/Header';
 
 const Home: NextPage = () => {
 
@@ -14,9 +15,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
-        <h1>Meu Número da Sorte</h1>
-      </header>
+      <Header />
       <GenerateNumber />
     </div>
   )

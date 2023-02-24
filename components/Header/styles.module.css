@@ -1,0 +1,55 @@
+.container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 27px 0 27px;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 700;
+    color: #023047;
+}
+
+.lastResultArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.titleResult, .subTitleResult{
+    font-size: 16px;
+    font-weight: 700;
+    color: #E6EAED;
+    margin: 0;
+}
+
+.subTitleResult{
+    font-size: 24px;
+}
+
+.numberArea{
+    display: flex;
+    gap: 8px;
+}
+
+.numberRounded{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+    background-color: #023047;
+    border-radius: 50px;
+    color: #FFB703;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.numberRounded p{
+    
+}

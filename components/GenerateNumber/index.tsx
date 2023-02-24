@@ -8,7 +8,6 @@ import { verifyNumber } from '../../utils/verifyNumber';
 import Button from '../Button';
 
 const GenerateNumber = () => {
-
   const [myNumber, setMyNumber] = useState<string>('');
   const [ready, setReady ] = useState<boolean>(false);
 
@@ -25,6 +24,7 @@ const GenerateNumber = () => {
     if(findGenarate.length >= 1) {
       setReady(true);
     }
+
   }
   
   return (
