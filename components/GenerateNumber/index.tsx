@@ -5,6 +5,8 @@ import { dados } from '../../data/data';
 import { genarateNumber } from '../../utils/generateNumber';
 import { verifyNumber } from '../../utils/verifyNumber';
 
+import Button from '../Button';
+
 const GenerateNumber = () => {
 
   const [myNumber, setMyNumber] = useState<string>('');
@@ -31,7 +33,10 @@ const GenerateNumber = () => {
       {ready && 
         <h5>Número já sorteado em outro concurso.</h5>
       }
-      <button onClick={gerarNumeros}>Gerar Números</button>
+      <Button 
+        title='Gerar Números'
+        click={() => gerarNumeros()}
+      />
     </div>
   )
 }
