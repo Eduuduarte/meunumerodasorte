@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css';
 import GenerateNumber from '../components/GenerateNumber';
 import Header from '../components/Header';
 import Switch from '../components/Switch';
+import ChoicesNumber from '../components/ChoicesNumber'
 import { useState } from 'react';
 
 const Home: NextPage = () => {
@@ -28,6 +29,8 @@ const Home: NextPage = () => {
         click={handleClick}
         status={status}
       />
+
+      <ChoicesNumber />
   
       <GenerateNumber />
     </div>
