@@ -4,8 +4,15 @@ import styles from '../styles/Home.module.css';
 
 import GenerateNumber from '../components/GenerateNumber';
 import Header from '../components/Header';
+import Switch from '../components/Switch';
+import { useState } from 'react';
 
 const Home: NextPage = () => {
+  const [status, setStatus] = useState(false);
+  const handleClick = () => {
+    setStatus(!status);
+    console.log(status);
+  }
 
   return (
     <div className={styles.container}>
@@ -16,6 +23,11 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
+
+      <Switch
+        click={handleClick}
+        status={status}
+      />
   
       <GenerateNumber />
     </div>
