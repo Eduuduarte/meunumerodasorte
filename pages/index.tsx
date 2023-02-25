@@ -16,6 +16,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
+  
       <GenerateNumber />
     </div>
   )
