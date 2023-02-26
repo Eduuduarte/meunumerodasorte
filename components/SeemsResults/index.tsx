@@ -3,16 +3,19 @@ import { useAppContext } from '../../context/app';
 import styles from './styles.module.css';
 
 import NumberSingle from '../NumberSingle';
+import { formatterNumber } from '../../libs/formatter';
 
 const index = () => {
     const { seemsResults } = useAppContext();
+
+    const formatter = formatterNumber()
     return (
         <div className={styles.container}>
-            <h4>Resultados parecidos - {seemsResults?.length}</h4>
+            <h4 className={styles.title}>Resultados parecidos - {seemsResults?.length} Jogos</h4>
             {seemsResults?.map((value, index) => (
                 <div className={styles.card} key={index}>
-                    <div>
-                        <div>Concurso {value.Sorteio} - {value.Data}</div>
+                    <div className={styles.titleCard}>
+                        <div>Concurso {value.Sorteio} - {formatter.formatterData(value.Data.valueOf())}</div>
                         <span>{value.counts} - Acertos</span>
                     </div>
                     <div className={styles.areaNumber}>
