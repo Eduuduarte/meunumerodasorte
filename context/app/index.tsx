@@ -7,7 +7,7 @@ export { useAppContext } from './hook';
 
 const initialState: DataType = {
     allResults: dados,
-    numberGenerate: null,
+    numberGenerate: "00 00 00 00 00 00",
     seemsResults: null
 }
 

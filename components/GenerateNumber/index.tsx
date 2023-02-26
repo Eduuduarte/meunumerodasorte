@@ -6,12 +6,14 @@ import { genarateNumber } from '../../utils/generateNumber';
 import { verifyNumber } from '../../utils/verifyNumber';
 
 import Button from '../Button';
+import { useAppContext } from '../../context/app';
 
 const GenerateNumber = () => {
-  const [myNumber, setMyNumber] = useState<string>('');
   const [ready, setReady ] = useState<boolean>(false);
 
-  const partNumber = myNumber.split(" ");
+  const {numberGenerate, setNumberGenerate, seemsResults,setSeemsResults} = useAppContext()
+
+  const partNumber = numberGenerate?.split(" ");
 
   const gerarNumeros = () => {
     setReady(false);
@@ -19,14 +21,15 @@ const GenerateNumber = () => {
     const findGenarate = dados.filter(value => value.resultados == genarate);
 
     const verify = verifyNumber(genarate);
-    setMyNumber(genarate);
+    setSeemsResults(verify);
+    setNumberGenerate(genarate);
    
-    console.log(verify);
+    
 
     if(findGenarate.length >= 1) {
       setReady(true);
     }
-
+    console.log(numberGenerate);
   }
   
   return (

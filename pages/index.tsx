@@ -1,15 +1,19 @@
 import type { NextPage } from 'next'
+import { useState } from 'react';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css';
 
 import GenerateNumber from '../components/GenerateNumber';
 import Header from '../components/Header';
 import ToggleButton from '../components/ToggleButton';
-import ChoicesNumber from '../components/ChoicesNumber'
-import { useState } from 'react';
+import ChoicesNumber from '../components/ChoicesNumber';
+import SeemsResults from '../components/SeemsResults';
+
+import { results } from '../types/dataType';
+import { useAppContext } from '../context/app';
 
 const Home: NextPage = () => {
-  const [status, setStatus] = useState(false);
+  const [status, setStatus] = useState(true);
   const handleClick = () => {
     setStatus(!status);
     console.log(status);
@@ -27,7 +31,7 @@ const Home: NextPage = () => {
 
       <div className={styles.toggleButtonArea}>
         <ToggleButton 
-          title='Gerar Números'
+          title='Números Aleatórios'
           click={handleClick}
           status={status}
         />
@@ -41,6 +45,8 @@ const Home: NextPage = () => {
       {status && 
             <GenerateNumber />
       }
+
+      <SeemsResults />
     </div>
   )
 }

@@ -4,7 +4,7 @@ import { results } from "../../types/dataType";
 
 export type DataType = {
     allResults: results[] | null;
-    numberGenerate: string | null;
+    numberGenerate: string;
     seemsResults : results[] | null;
 }
 
