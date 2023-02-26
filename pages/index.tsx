@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 
 import GenerateNumber from '../components/GenerateNumber';
 import Header from '../components/Header';
-import Switch from '../components/Switch';
+import ToggleButton from '../components/ToggleButton';
 import ChoicesNumber from '../components/ChoicesNumber'
 import { useState } from 'react';
 
@@ -25,14 +25,22 @@ const Home: NextPage = () => {
 
       <Header />
 
-      <Switch
-        click={handleClick}
-        status={status}
-      />
-
-      <ChoicesNumber />
+      <div className={styles.toggleButtonArea}>
+        <ToggleButton 
+          title='Gerar Números'
+          click={handleClick}
+          status={status}
+        />
+        <ToggleButton 
+          title='Escolher Números'
+          click={handleClick}
+          status={!status}
+        />
+      </div>
   
-      <GenerateNumber />
+      {status && 
+            <GenerateNumber />
+      }
     </div>
   )
 }
