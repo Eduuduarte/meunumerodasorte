@@ -1,11 +1,13 @@
 import React from 'react';
+import styles from './styles.module.css';
 import NumberButton from '../NumberButton';
+import { arrayNumberKey } from '../../data/number';
 
 const index = () => {
-    const testArray = [1, 2];
+
   return (
-    <div>
-        {testArray.map((value, index) => (
+    <div className={styles.container}>
+        {arrayNumberKey.map((value, index) => (
             <NumberButton
             key={value}
             number={value}

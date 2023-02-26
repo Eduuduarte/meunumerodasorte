@@ -45,6 +45,9 @@ const Home: NextPage = () => {
       {status && 
             <GenerateNumber />
       }
+      {!status && 
+        <ChoicesNumber />
+      }
 
       <SeemsResults />
     </div>
