@@ -2,8 +2,17 @@ import Image from 'next/image';
 import React from 'react';
 import styles from './styles.module.css';
 import Cover from '../../public/assets/clover.svg';
+import { useAppContext } from '../../context/app';
+import { formatterNumber } from '../../libs/formatter';
 
 const index = () => {
+  const {allResults} = useAppContext();
+
+  const formatter = formatterNumber();
+
+  const n = allResults?.length
+  const lastResult = allResults[n-1].resultados.split(" ");
+
   return (
     <div className={styles.container}>
         <div className={styles.title}>Meu número da sorte</div>
@@ -12,14 +21,14 @@ const index = () => {
         </div>
         <div className={styles.lastResultArea}>
             <p className={styles.titleResult}>último resultado</p>
-            <p className={styles.subTitleResult}>Concurso - 2566 18/02/2023</p>
+            <p className={styles.subTitleResult}>Concurso - {allResults[n-1].Sorteio} {formatter.formatterData(allResults[n-1].Data)}</p>
             <div className={styles.numberArea}>
-                <div className={styles.numberRounded}>11</div>
-                <div className={styles.numberRounded}>23</div>
-                <div className={styles.numberRounded}>45</div>
-                <div className={styles.numberRounded}>53</div>
-                <div className={styles.numberRounded}>57</div>
-                <div className={styles.numberRounded}>59</div>
+                <div className={styles.numberRounded}>{lastResult[0]}</div>
+                <div className={styles.numberRounded}>{lastResult[1]}</div>
+                <div className={styles.numberRounded}>{lastResult[2]}</div>
+                <div className={styles.numberRounded}>{lastResult[3]}</div>
+                <div className={styles.numberRounded}>{lastResult[4]}</div>
+                <div className={styles.numberRounded}>{lastResult[5]}</div>
             </div>
         </div>
     </div>

@@ -3,7 +3,7 @@ import { Dispatch, ReactNode } from "react";
 import { results } from "../../types/dataType";
 
 export type DataType = {
-    allResults: results[] | null;
+    allResults: results[];
     numberGenerate: string;
     seemsResults : results[] | null;
 }
