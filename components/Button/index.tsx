@@ -8,9 +8,9 @@ type Props = {
 
 const index = ({title, click}:Props) => {
   return (
-    <div className={styles.conatiner} onClick={click}>
-      <div>{title}</div>
-    </div>
+    <button className={styles.conatiner} onClick={click}>
+      <div className={styles.title}>{title}</div>
+    </button>
   )
 }
 

@@ -11,6 +11,8 @@ const GenerateNumber = () => {
   const [myNumber, setMyNumber] = useState<string>('');
   const [ready, setReady ] = useState<boolean>(false);
 
+  const partNumber = myNumber.split(" ");
+
   const gerarNumeros = () => {
     setReady(false);
     const genarate = genarateNumber();
@@ -29,7 +31,14 @@ const GenerateNumber = () => {
   
   return (
     <div className={styles.container}>
-      <h1>{myNumber}</h1>
+      <div className={styles.numberArea}>
+        <div className={styles.sigleNumber}>{partNumber[0]}</div>
+        <div className={styles.sigleNumber}>{partNumber[1]}</div>
+        <div className={styles.sigleNumber}>{partNumber[2]}</div>
+        <div className={styles.sigleNumber}>{partNumber[3]}</div>
+        <div className={styles.sigleNumber}>{partNumber[4]}</div>
+        <div className={styles.sigleNumber}>{partNumber[5]}</div>
+      </div>
       {ready && 
         <h5>Número já sorteado em outro concurso.</h5>
       }
