@@ -3,6 +3,7 @@ import styles from './styles.module.css';
 import { formatterNumber } from '../../libs/formatter';
 import { useAppContext } from '../../context/app';
 import { valueFalse, valueTrue } from '../../utils/choicesNumbers';
+import { verifyNumber } from '../../utils/verifyNumber';
 
 type Props = {
   number: number
@@ -11,9 +12,18 @@ type Props = {
 const index = ({ number }: Props) => {
   const [choice, setChoice] = useState(false);
 
-  const { numberGenerate, setNumberGenerate, countsChoices, setCountsChoices } = useAppContext();
+  const { numberGenerate, setNumberGenerate, countsChoices, setCountsChoices, setSeemsResults } = useAppContext();
 
   const handlerColorButton = () => {
+    if(choice){
+      let numero = countsChoices - 1;
+      setCountsChoices(numero);
+      const newValue = valueFalse(number, numberGenerate);
+      setNumberGenerate(newValue)
+      setChoice(!choice)
+      const verify = verifyNumber(numberGenerate);
+      setSeemsResults(verify)
+    }
     if (countsChoices === 6) return;
     setChoice(!choice);
 
@@ -23,13 +33,8 @@ const index = ({ number }: Props) => {
       setCountsChoices(numero);
       const newValue = valueTrue(number, numberGenerate);
       setNumberGenerate(newValue);
-    } else {
-
-      let numero = countsChoices - 1;
-      setCountsChoices(numero);
-      const newValue = valueFalse(number, numberGenerate);
-      setNumberGenerate(newValue)
-    
+      const verify = verifyNumber(numberGenerate);
+      setSeemsResults(verify)
     }
   }
 

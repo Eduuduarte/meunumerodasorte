@@ -1,5 +1,14 @@
 .container{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.numbers{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 22px 0;
 }
 
 .areaKey{
@@ -7,6 +16,13 @@
     grid-template-columns: repeat(6, 1fr);
     gap: 8px;
     padding: 8px;
+    margin-bottom: 22px;
     background-color: #01141E;
     border-radius: 20px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

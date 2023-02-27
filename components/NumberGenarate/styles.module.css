@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.numberArea{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.sigleNumber{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 58px;
+    height: 58px;
+    background-color: #023047;
+    border-radius: 50px;
+    color: #FFB703;
+    font-size: 32px;
+    font-weight: 700;
+}

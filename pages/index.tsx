@@ -14,9 +14,12 @@ import { useAppContext } from '../context/app';
 
 const Home: NextPage = () => {
   const [status, setStatus] = useState(true);
+  const {setCountsChoices, setNumberGenerate, setSeemsResults} = useAppContext();
   const handleClick = () => {
     setStatus(!status);
-    console.log(status);
+    setCountsChoices(0)
+    setNumberGenerate("00 00 00 00 00 00");
+    setSeemsResults([]);
   }
 
   return (
