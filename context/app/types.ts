@@ -5,7 +5,8 @@ import { results } from "../../types/dataType";
 export type DataType = {
     allResults: results[];
     numberGenerate: string;
-    seemsResults : results[] | null;
+    seemsResults: results[] | null;
+    countsChoices: number;
 }
 
 export type ActionType = {
@@ -25,5 +26,6 @@ export type ProviderType = {
 export enum Actions {
     SET_ALLRESULTS,
     SET_NUMBERGENERATE,
-    SET_SEEMSRESULTS
+    SET_SEEMSRESULTS,
+    SET_COUNTCHOICES
 }

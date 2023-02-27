@@ -7,12 +7,14 @@ const index = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.areaKey}>
         {arrayNumberKey.map((value, index) => (
-            <NumberButton
+          <NumberButton
             key={value}
             number={value}
-            />
+          />
         ))}
+      </div>
     </div>
   )
 }

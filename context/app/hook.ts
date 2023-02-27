@@ -25,6 +25,12 @@ export const useAppContext = () => {
                 type: Actions.SET_SEEMSRESULTS,
                 payload: { seemsResults }
             })
+        },
+        setCountsChoices: (countsChoices: number) => {
+            dispatch({
+                type: Actions.SET_COUNTCHOICES,
+                payload: { countsChoices }
+            })
         }
     }
 }

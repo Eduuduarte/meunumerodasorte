@@ -8,6 +8,8 @@ export const reducer = (state: DataType, action: ActionType) => {
             return { ...state, numberGenerate: action.payload.numberGenerate}
         case Actions.SET_SEEMSRESULTS:
             return { ...state, seemsResults: action.payload.seemsResults}
+        case Actions.SET_COUNTCHOICES:
+            return { ...state, countsChoices: action.payload.countsChoices}
         default: return state;
     }
 }

@@ -1,5 +1,12 @@
 .container{
+    
+}
+
+.areaKey{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 8px;
+    padding: 8px;
+    background-color: #01141E;
+    border-radius: 20px;
 }

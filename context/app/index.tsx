@@ -8,7 +8,8 @@ export { useAppContext } from './hook';
 const initialState: DataType = {
     allResults: dados,
     numberGenerate: "00 00 00 00 00 00",
-    seemsResults: null
+    seemsResults: null,
+    countsChoices: 0
 }
 
 export const AppContext = createContext<ContextType>({
