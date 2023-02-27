@@ -1,5 +1,4 @@
 import React from 'react';
-import { useAppContext } from '../../context/app';
 import styles from './styles.module.css';
 
 type Props = {

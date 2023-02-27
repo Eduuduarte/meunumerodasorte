@@ -50,6 +50,23 @@
     font-weight: 700;
 }
 
-.numberRounded p{
-    
+@media (max-width: 450px) {
+  .container{
+    flex-direction: column;
+  }
+
+  .title{
+    font-size: 30px;
+    margin-bottom: 22px;
+  }
+
+  .image{
+    display: none;
+  }
+
+  .numberRounded{
+    background-color: transparent;
+    border: 1px solid #023047;
+    color: #E6EAED;
+  }
 }

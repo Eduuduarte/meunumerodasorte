@@ -6,6 +6,7 @@ import { genarateNumber } from '../../utils/generateNumber';
 import { verifyNumber } from '../../utils/verifyNumber';
 
 import Button from '../Button';
+import NumberGenarate from '../NumberGenarate';
 import { useAppContext } from '../../context/app';
 
 const GenerateNumber = () => {
@@ -13,7 +14,6 @@ const GenerateNumber = () => {
 
   const {numberGenerate, setNumberGenerate, seemsResults,setSeemsResults} = useAppContext()
 
-  const partNumber = numberGenerate?.split(" ");
 
   const gerarNumeros = () => {
     setReady(false);
@@ -29,21 +29,13 @@ const GenerateNumber = () => {
     if(findGenarate.length >= 1) {
       setReady(true);
     }
-    console.log(numberGenerate);
   }
   
   return (
     <div className={styles.container}>
-      <div className={styles.numberArea}>
-        <div className={styles.sigleNumber}>{partNumber[0]}</div>
-        <div className={styles.sigleNumber}>{partNumber[1]}</div>
-        <div className={styles.sigleNumber}>{partNumber[2]}</div>
-        <div className={styles.sigleNumber}>{partNumber[3]}</div>
-        <div className={styles.sigleNumber}>{partNumber[4]}</div>
-        <div className={styles.sigleNumber}>{partNumber[5]}</div>
-      </div>
+      <NumberGenarate />
       {ready && 
-        <h5>Número já sorteado em outro concurso.</h5>
+        <h5 className={styles.msg}>Número já sorteado em outro concurso.</h5>
       }
       <Button 
         title='Gerar Números'

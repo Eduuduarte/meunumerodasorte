@@ -9,18 +9,16 @@ import ToggleButton from '../components/ToggleButton';
 import ChoicesNumber from '../components/ChoicesNumber';
 import SeemsResults from '../components/SeemsResults';
 
-import { results } from '../types/dataType';
 import { useAppContext } from '../context/app';
 
 const Home: NextPage = () => {
   const [status, setStatus] = useState(true);
-  const {setCountsChoices, setNumberGenerate, setSeemsResults} = useAppContext();
+  const {setCountsChoices, setNumberGenerate, setSeemsResults, seemsResults} = useAppContext();
   const handleClick = () => {
     setStatus(!status);
     setCountsChoices(0)
     setNumberGenerate("00 00 00 00 00 00");
     setSeemsResults([]);
-    console.log(status)
   }
 
   return (
@@ -54,7 +52,11 @@ const Home: NextPage = () => {
         />
       }
 
-      <SeemsResults />
+      {seemsResults &&
+        <SeemsResults />
+      }
+
+      
     </div>
   )
 }

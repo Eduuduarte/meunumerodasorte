@@ -1,6 +1,5 @@
 import { formatterNumber } from "../libs/formatter";
 import { numeroDaSorte } from "../libs/randomNumber";
-import { dados } from "../data/data";
 
 export const genarateNumber = () => {
     const random = numeroDaSorte();

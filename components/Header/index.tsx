@@ -17,7 +17,7 @@ const index = () => {
     <div className={styles.container}>
         <div className={styles.title}>Meu número da sorte</div>
         <div>
-            <Image src={Cover} alt="cover" width={100} height={100}/>
+            <Image src={Cover} alt="cover" className={styles.image} width={100} height={100}/>
         </div>
         <div className={styles.lastResultArea}>
             <p className={styles.titleResult}>último resultado</p>

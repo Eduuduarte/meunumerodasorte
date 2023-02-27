@@ -6,12 +6,12 @@ import NumberSingle from '../NumberSingle';
 import { formatterNumber } from '../../libs/formatter';
 
 const index = () => {
-    const { seemsResults } = useAppContext();
+    const { seemsResults, allResults } = useAppContext();
 
     const formatter = formatterNumber()
     return (
         <div className={styles.container}>
-            <h4 className={styles.title}>Resultados parecidos - {seemsResults?.length} Jogos</h4>
+            <h4 className={styles.title}>Resultados parecidos - {seemsResults?.length}/{allResults.length} Jogos</h4>
             {seemsResults?.map((value, index) => (
                 <div className={styles.card} key={index}>
                     <div className={styles.titleCard}>
