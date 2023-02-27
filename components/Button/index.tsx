@@ -8,7 +8,7 @@ type Props = {
   colorFont: string;
 }
 
-const index = ({ title, click, colorBack, colorFont }: Props) => {
+const Index = ({ title, click, colorBack, colorFont }: Props) => {
   return (
     <button className={styles.conatiner} onClick={click} style={{
       backgroundColor: `${colorBack}`,
@@ -19,4 +19,4 @@ const index = ({ title, click, colorBack, colorFont }: Props) => {
   )
 }
 
-export default index;
+export default Index;

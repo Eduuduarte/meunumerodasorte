@@ -2,7 +2,7 @@ import React from 'react';
 import { useAppContext } from '../../context/app';
 import styles from './styles.module.css';
 
-const index = () => {
+const Index = () => {
   const {numberGenerate} = useAppContext()
 
   const partNumber = numberGenerate?.split(" ");
@@ -20,4 +20,4 @@ const index = () => {
   )
 }
 
-export default index;
+export default Index;

@@ -6,7 +6,7 @@ type Props = {
     numberSingle: string
 }
 
-const index = ({ numberSingle }: Props) => {
+const Index = ({ numberSingle }: Props) => {
   const { numberGenerate } = useAppContext();
 
   const verify = numberGenerate.split(" ").filter(value => value == numberSingle);
@@ -22,4 +22,4 @@ const index = ({ numberSingle }: Props) => {
   )
 }
 
-export default index;
+export default Index;

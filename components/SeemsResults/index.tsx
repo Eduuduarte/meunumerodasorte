@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 import NumberSingle from '../NumberSingle';
 import { formatterNumber } from '../../libs/formatter';
 
-const index = () => {
+const Index = () => {
     const { seemsResults, allResults } = useAppContext();
 
     const formatter = formatterNumber()
@@ -32,4 +32,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Index

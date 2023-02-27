@@ -10,7 +10,7 @@ import { useAppContext } from '../../context/app';
 import { verifyNumber } from '../../utils/verifyNumber';
 
 
-const index = () => {
+const Index = () => {
   const { setSeemsResults, numberGenerate, setCountsChoices, setNumberGenerate } = useAppContext();
 
   const [statusBottom, setStatusBottom] = useState(false);
@@ -63,4 +63,4 @@ const index = () => {
   )
 }
 
-export default index;
+export default Index;

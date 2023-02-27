@@ -10,7 +10,7 @@ type Props = {
   status: boolean;
 }
 
-const index = ({ number, status }: Props) => {
+const Index = ({ number, status }: Props) => {
   const [choice, setChoice] = useState(false);
 
   const { numberGenerate, setNumberGenerate, countsChoices, setCountsChoices, setSeemsResults } = useAppContext();
@@ -59,4 +59,4 @@ const index = ({ number, status }: Props) => {
   )
 }
 
-export default index;
+export default Index;

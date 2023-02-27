@@ -5,7 +5,7 @@ import Cover from '../../public/assets/clover.svg';
 import { useAppContext } from '../../context/app';
 import { formatterNumber } from '../../libs/formatter';
 
-const index = () => {
+const Index = () => {
   const {allResults} = useAppContext();
 
   const formatter = formatterNumber();
@@ -35,4 +35,4 @@ const index = () => {
   )
 }
 
-export default index;
+export default Index;

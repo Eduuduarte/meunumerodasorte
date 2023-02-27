@@ -7,7 +7,7 @@ type Props = {
     status: boolean;
 }
 
-const index = ({title, click, status}:Props) => {
+const Index = ({title, click, status}:Props) => {
 
   return (
     <div className={styles.container} onClick={click} style={{backgroundColor: `${status ? "#023047" : "#557484"}`}}>
@@ -16,4 +16,4 @@ const index = ({title, click, status}:Props) => {
   )
 }
 
-export default index
+export default Index
