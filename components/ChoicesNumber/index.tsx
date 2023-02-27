@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, Component } from 'react';
 import styles from './styles.module.css';
 import NumberButton from '../NumberButton';
 import { arrayNumberKey } from '../../data/number';
@@ -9,13 +9,24 @@ import Button from '../Button';
 import { useAppContext } from '../../context/app';
 import { verifyNumber } from '../../utils/verifyNumber';
 
+
 const index = () => {
-  const { setSeemsResults, numberGenerate } = useAppContext();
+  const { setSeemsResults, numberGenerate, setCountsChoices, setNumberGenerate } = useAppContext();
+
+  const [statusBottom, setStatusBottom] = useState(false);
 
   const handleGerar = () => {
     const verify = verifyNumber(numberGenerate);
     setSeemsResults(verify);
   }
+
+  const handleClear = () => {
+    setStatusBottom(!statusBottom);
+    setCountsChoices(0)
+    setNumberGenerate("00 00 00 00 00 00");
+    setSeemsResults([]);
+  }
+
 
   return (
     <div className={styles.container}>
@@ -28,13 +39,19 @@ const index = () => {
         {arrayNumberKey.map((value, index) => (
           <div key={value} className={styles.button}>
             <NumberButton
-              number={value} />
+              number={value}
+              status={statusBottom}
+              />
           </div>
         ))}
       </div>
       <Button 
         title='Gerar'
         click={() => handleGerar()}
+      />
+      <Button 
+        title='Limpar'
+        click={() => handleClear()}
       />
     </div>
   )

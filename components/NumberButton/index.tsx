@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 import { formatterNumber } from '../../libs/formatter';
 import { useAppContext } from '../../context/app';
@@ -7,13 +7,18 @@ import { verifyNumber } from '../../utils/verifyNumber';
 
 type Props = {
   number: number
+  status: boolean;
 }
 
-const index = ({ number }: Props) => {
+const index = ({ number, status }: Props) => {
   const [choice, setChoice] = useState(false);
 
   const { numberGenerate, setNumberGenerate, countsChoices, setCountsChoices, setSeemsResults } = useAppContext();
 
+  useEffect(() => {
+    setChoice(false)
+  }, [status])
+  
   const handlerColorButton = () => {
     if(choice){
       let numero = countsChoices - 1;
@@ -28,7 +33,6 @@ const index = ({ number }: Props) => {
     setChoice(!choice);
 
     if (!choice) {
-
       let numero = countsChoices + 1;
       setCountsChoices(numero);
       const newValue = valueTrue(number, numberGenerate);

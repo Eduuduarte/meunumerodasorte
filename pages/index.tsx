@@ -20,6 +20,7 @@ const Home: NextPage = () => {
     setCountsChoices(0)
     setNumberGenerate("00 00 00 00 00 00");
     setSeemsResults([]);
+    console.log(status)
   }
 
   return (
@@ -49,7 +50,8 @@ const Home: NextPage = () => {
             <GenerateNumber />
       }
       {!status && 
-        <ChoicesNumber />
+        <ChoicesNumber 
+        />
       }
 
       <SeemsResults />
