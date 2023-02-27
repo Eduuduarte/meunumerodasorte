@@ -26,3 +26,9 @@
     justify-content: center;
     align-items: center;
 }
+
+.buttonMain{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}

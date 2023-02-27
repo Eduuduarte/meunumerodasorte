@@ -48,6 +48,8 @@ const GenerateNumber = () => {
       <Button 
         title='Gerar Números'
         click={() => gerarNumeros()}
+        colorBack="#FB8500"
+        colorFont='#F4FAFD'
       />
     </div>
   )

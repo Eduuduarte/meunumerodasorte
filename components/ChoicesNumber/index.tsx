@@ -41,18 +41,24 @@ const index = () => {
             <NumberButton
               number={value}
               status={statusBottom}
-              />
+            />
           </div>
         ))}
       </div>
-      <Button 
-        title='Gerar'
-        click={() => handleGerar()}
-      />
-      <Button 
-        title='Limpar'
-        click={() => handleClear()}
-      />
+      <div className={styles.buttonMain}>
+        <Button
+          title='Gerar'
+          click={() => handleGerar()}
+          colorBack="#FB8500"
+          colorFont='#F4FAFD'
+        />
+        <Button
+          title='Limpar'
+          click={() => handleClear()}
+          colorBack="#8BA0AA"
+          colorFont='#01141E'
+        />
+      </div>
     </div>
   )
 }
