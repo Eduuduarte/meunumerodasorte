@@ -9,7 +9,6 @@ import Button from '../Button';
 import { useAppContext } from '../../context/app';
 import { verifyNumber } from '../../utils/verifyNumber';
 
-
 const Index = () => {
   const { setSeemsResults, numberGenerate, setCountsChoices, setNumberGenerate } = useAppContext();
 
@@ -26,7 +25,6 @@ const Index = () => {
     setNumberGenerate("00 00 00 00 00 00");
     setSeemsResults([]);
   }
-
 
   return (
     <div className={styles.container}>

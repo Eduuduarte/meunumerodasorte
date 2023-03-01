@@ -12,8 +12,7 @@ import { useAppContext } from '../../context/app';
 const GenerateNumber = () => {
   const [ready, setReady ] = useState<boolean>(false);
 
-  const {numberGenerate, setNumberGenerate, seemsResults,setSeemsResults} = useAppContext()
-
+  const { setNumberGenerate, setSeemsResults} = useAppContext()
 
   const gerarNumeros = () => {
     setReady(false);
@@ -24,8 +23,6 @@ const GenerateNumber = () => {
     setSeemsResults(verify);
     setNumberGenerate(genarate);
    
-    
-
     if(findGenarate.length >= 1) {
       setReady(true);
     }

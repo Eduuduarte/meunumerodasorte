@@ -14,6 +14,7 @@ import { useAppContext } from '../context/app';
 const Home: NextPage = () => {
   const [status, setStatus] = useState(true);
   const { setCountsChoices, setNumberGenerate, setSeemsResults, seemsResults } = useAppContext();
+  
   const handleClick = () => {
     setStatus(!status);
     setCountsChoices(0)
@@ -31,7 +32,6 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-
       <div className={styles.toggleButtonArea}>
         <ToggleButton
           title='Números Aleatórios'
@@ -52,11 +52,9 @@ const Home: NextPage = () => {
         <ChoicesNumber
         />
       }
-
       {seemsResults &&
         <SeemsResults />
       }
-
 
     </div>
   )
