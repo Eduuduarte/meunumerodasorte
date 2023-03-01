@@ -10,10 +10,14 @@ export const formatterNumber = () => ({
 
         const rightData = new Date(newData)
 
-        const dia = rightData.getDate().toString().padStart(2, "0");
-        const mes = (rightData.getMonth()+1).toString().padStart(2, "0");
-        const ano = rightData.getFullYear();
+        const formated = Intl.DateTimeFormat("pt-br").format(rightData)
 
-        return `${dia}/${mes}/${ano}`;
+        // const dia = rightData.getDate().toString().padStart(2, "0");
+        // const mes = (rightData.getMonth()+1).toString().padStart(2, "0");
+        // const ano = rightData.getFullYear();
+
+        // `${dia}/${mes}/${ano}`;
+
+        return formated
     }
 });
