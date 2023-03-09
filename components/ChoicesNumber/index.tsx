@@ -1,13 +1,15 @@
 import React, { useState, Component } from 'react';
 import styles from './styles.module.css';
 import NumberButton from '../NumberButton';
-import { arrayNumberKey } from '../../data/number';
 
+
+import { verifyNumber } from '../../utils/verifyNumber';
 import NumberGenerate from '../NumberGenarate';
 import Button from '../Button';
 
 import { useAppContext } from '../../context/app';
-import { verifyNumber } from '../../utils/verifyNumber';
+import { arrayNumberKey } from '../../data/number';
+
 
 const Index = () => {
   const { setSeemsResults, numberGenerate, setCountsChoices, setNumberGenerate } = useAppContext();
@@ -28,6 +30,7 @@ const Index = () => {
 
   return (
     <div className={styles.container}>
+
       <div className={styles.numbers}>
         <NumberGenerate
         />
@@ -43,6 +46,7 @@ const Index = () => {
           </div>
         ))}
       </div>
+
       <div className={styles.buttonMain}>
         <Button
           title='Gerar'

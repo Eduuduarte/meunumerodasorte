@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
-import { useState } from 'react';
 import Head from 'next/head'
+import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 
 import GenerateNumber from '../components/GenerateNumber';
@@ -14,7 +14,7 @@ import { useAppContext } from '../context/app';
 const Home: NextPage = () => {
   const [status, setStatus] = useState(true);
   const { setCountsChoices, setNumberGenerate, setSeemsResults, seemsResults } = useAppContext();
-  
+
   const handleClick = () => {
     setStatus(!status);
     setCountsChoices(0)
