@@ -1,6 +1,12 @@
 import { results } from "../types/dataType";
 
 export const dados: results[] = [
+    {"Sorteio":1855,"Data":"2016-09-10T03:00:00.000Z","resultados":"06 10 15 24 38 39"},
+    {"Sorteio":1856,"Data":"2016-09-14T03:00:00.000Z","resultados":"02 09 14 22 32 37"},
+    {"Sorteio":1857,"Data":"2016-09-17T03:00:00.000Z","resultados":"13 23 25 35 52 53"},
+    {"Sorteio":1858,"Data":"2016-09-20T03:00:00.000Z","resultados":"22 28 30 33 55 59"},
+    {"Sorteio":1859,"Data":"2016-09-22T03:00:00.000Z","resultados":"01 13 14 21 26 51"},
+    {"Sorteio":1860,"Data":"2016-09-24T03:00:00.000Z","resultados":"10 30 36 40 44 60"},{"Sorteio":1861,"Data":"2016-09-28T03:00:00.000Z","resultados":"02 04 09 35 45 60"},{"Sorteio":1862,"Data":"2016-10-01T03:00:00.000Z","resultados":"02 08 35 42 49 56"},{"Sorteio":1863,"Data":"2016-10-05T03:00:00.000Z","resultados":"16 23 45 56 58 59"},{"Sorteio":1864,"Data":"2016-10-08T03:00:00.000Z","resultados":"04 05 14 37 40 60"},{"Sorteio":1865,"Data":"2016-10-13T03:00:00.000Z","resultados":"01 05 31 32 37 42"},{"Sorteio":1866,"Data":"2016-10-15T03:00:00.000Z","resultados":"14 17 36 38 44 60"},{"Sorteio":1867,"Data":"2016-10-18T03:00:00.000Z","resultados":"03 10 17 21 22 43"},{"Sorteio":1868,"Data":"2016-10-20T03:00:00.000Z","resultados":"01 05 23 25 28 31"},{"Sorteio":1869,"Data":"2016-10-22T03:00:00.000Z","resultados":"11 23 24 26 40 52"},{"Sorteio":1870,"Data":"2016-10-26T03:00:00.000Z","resultados":"18 20 30 32 33 40"},{"Sorteio":1871,"Data":"2016-10-29T03:00:00.000Z","resultados":"03 11 17 33 52 58"},{"Sorteio":1872,"Data":"2016-11-03T03:00:00.000Z","resultados":"11 13 25 39 46 56"},{"Sorteio":1873,"Data":"2016-11-05T03:00:00.000Z","resultados":"05 25 28 41 53 54"},{"Sorteio":1874,"Data":"2016-11-08T03:00:00.000Z","resultados":"10 28 37 43 44 47"},{"Sorteio":1875,"Data":"2016-11-10T03:00:00.000Z","resultados":"01 45 47 52 53 55"},{"Sorteio":1876,"Data":"2016-11-12T03:00:00.000Z","resultados":"07 18 39 41 44 51"},{"Sorteio":1877,"Data":"2016-11-16T03:00:00.000Z","resultados":"13 16 23 24 32 35"},{"Sorteio":1878,"Data":"2016-11-19T03:00:00.000Z","resultados":"12 16 26 40 56 57"},{"Sorteio":1879,"Data":"2016-11-23T03:00:00.000Z","resultados":"05 10 20 57 58 59"},
     {"Sorteio":1880,"Data":"2016-11-26T03:00:00.000Z","resultados":"05 16 19 37 51 56"},
     {"Sorteio":1881,"Data":"2016-11-30T03:00:00.000Z","resultados":"03 10 30 44 53 56"},
     {"Sorteio":1882,"Data":"2016-12-03T03:00:00.000Z","resultados":"09 10 19 35 37 41"},
