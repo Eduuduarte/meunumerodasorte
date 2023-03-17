@@ -1,6 +1,23 @@
 import { results } from "../types/dataType";
 
 export const dados: results[] = [
+    {"Sorteio":1808,"Data":"2016-04-13T03:00:00.000Z","resultados":"02 14 20 25 41 45"},
+    {"Sorteio":1809,"Data":"2016-04-16T03:00:00.000Z","resultados":"09 12 23 24 46 54"},
+    {"Sorteio":1810,"Data":"2016-04-20T03:00:00.000Z","resultados":"01 10 25 43 50 56"},
+    {"Sorteio":1811,"Data":"2016-04-23T03:00:00.000Z","resultados":"05 17 32 35 37 57"},
+    {"Sorteio":1812,"Data":"2016-04-27T03:00:00.000Z","resultados":"20 23 32 34 37 45"},
+    {"Sorteio":1813,"Data":"2016-04-30T03:00:00.000Z","resultados":"09 11 13 15 19 51"},
+    {"Sorteio":1814,"Data":"2016-05-03T03:00:00.000Z","resultados":"09 11 27 46 51 53"},
+    {"Sorteio":1815,"Data":"2016-05-05T03:00:00.000Z","resultados":"08 11 25 39 41 60"},
+    {"Sorteio":1816,"Data":"2016-05-07T03:00:00.000Z","resultados":"05 10 12 22 28 46"},
+    {"Sorteio":1817,"Data":"2016-05-11T03:00:00.000Z","resultados":"01 04 26 39 47 55"},
+    {"Sorteio":1818,"Data":"2016-05-14T03:00:00.000Z","resultados":"02 06 10 15 53 56"},
+    {"Sorteio":1819,"Data":"2016-05-18T03:00:00.000Z","resultados":"17 18 26 30 33 37"},
+    {"Sorteio":1820,"Data":"2016-05-21T03:00:00.000Z","resultados":"03 19 23 27 40 45"},
+    {"Sorteio":1821,"Data":"2016-05-25T03:00:00.000Z","resultados":"19 22 31 36 52 53"},
+    {"Sorteio":1822,"Data":"2016-05-28T03:00:00.000Z","resultados":"01 22 26 43 50 53"},
+    {"Sorteio":1823,"Data":"2016-06-01T03:00:00.000Z","resultados":"04 09 21 34 54 59"},
+    {"Sorteio":1824,"Data":"2016-06-04T03:00:00.000Z","resultados":"05 06 12 19 30 60"},
     {"Sorteio":1825,"Data":"2016-06-07T03:00:00.000Z","resultados":"10 11 21 50 51 54"},
     {"Sorteio":1826,"Data":"2016-06-09T03:00:00.000Z","resultados":"17 19 32 43 48 51"},
     {"Sorteio":1827,"Data":"2016-06-11T03:00:00.000Z","resultados":"26 33 42 43 53 54"},
