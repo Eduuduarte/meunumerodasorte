@@ -1,6 +1,12 @@
 import { results } from "../types/dataType";
 
 export const dados: results[] = [
+    {"Sorteio":1772,"Data":"2015-12-22T03:00:00.000Z","resultados":"12 19 27 39 41 45"},
+    {"Sorteio":1773,"Data":"2015-12-24T03:00:00.000Z","resultados":"15 30 39 41 45 59"},
+    {"Sorteio":1774,"Data":"2015-12-26T03:00:00.000Z","resultados":"01 12 20 30 52 60"},
+    {"Sorteio":1775,"Data":"2015-12-31T03:00:00.000Z","resultados":"02 18 31 42 51 56"},
+    {"Sorteio":1776,"Data":"2016-01-02T03:00:00.000Z","resultados":"10 11 14 19 39 48"},
+    {"Sorteio":1777,"Data":"2016-01-06T03:00:00.000Z","resultados":"04 19 38 44 52 55"},{"Sorteio":1778,"Data":"2016-01-09T03:00:00.000Z","resultados":"04 10 38 40 45 48"},{"Sorteio":1779,"Data":"2016-01-12T03:00:00.000Z","resultados":"12 25 30 39 56 57"},{"Sorteio":1780,"Data":"2016-01-14T03:00:00.000Z","resultados":"06 20 22 31 33 34"},{"Sorteio":1781,"Data":"2016-01-16T03:00:00.000Z","resultados":"01 08 22 49 52 53"},{"Sorteio":1782,"Data":"2016-01-20T03:00:00.000Z","resultados":"06 18 34 47 52 57"},{"Sorteio":1783,"Data":"2016-01-23T03:00:00.000Z","resultados":"04 06 16 18 21 38"},{"Sorteio":1784,"Data":"2016-01-27T03:00:00.000Z","resultados":"04 15 26 30 54 55"},{"Sorteio":1785,"Data":"2016-01-30T03:00:00.000Z","resultados":"05 11 27 41 42 54"},{"Sorteio":1786,"Data":"2016-02-02T03:00:00.000Z","resultados":"02 06 08 21 25 34"},{"Sorteio":1787,"Data":"2016-02-04T03:00:00.000Z","resultados":"01 05 13 25 26 29"},{"Sorteio":1788,"Data":"2016-02-06T03:00:00.000Z","resultados":"03 13 42 45 56 59"},{"Sorteio":1789,"Data":"2016-02-10T03:00:00.000Z","resultados":"06 25 43 57 58 59"},{"Sorteio":1790,"Data":"2016-02-13T03:00:00.000Z","resultados":"11 13 26 27 28 50"},{"Sorteio":1791,"Data":"2016-02-17T03:00:00.000Z","resultados":"12 18 46 50 53 55"},{"Sorteio":1792,"Data":"2016-02-20T03:00:00.000Z","resultados":"02 16 17 18 41 47"},{"Sorteio":1793,"Data":"2016-02-24T03:00:00.000Z","resultados":"13 14 22 54 56 58"},{"Sorteio":1794,"Data":"2016-02-27T03:00:00.000Z","resultados":"01 05 34 37 40 60"},{"Sorteio":1795,"Data":"2016-03-02T03:00:00.000Z","resultados":"30 42 47 50 55 58"},{"Sorteio":1796,"Data":"2016-03-05T03:00:00.000Z","resultados":"22 23 34 48 53 54"},{"Sorteio":1797,"Data":"2016-03-08T03:00:00.000Z","resultados":"02 13 14 35 54 57"},{"Sorteio":1798,"Data":"2016-03-10T03:00:00.000Z","resultados":"02 09 23 28 45 53"},{"Sorteio":1799,"Data":"2016-03-12T03:00:00.000Z","resultados":"01 03 04 39 51 53"},{"Sorteio":1800,"Data":"2016-03-16T03:00:00.000Z","resultados":"06 11 16 19 31 56"},{"Sorteio":1801,"Data":"2016-03-19T03:00:00.000Z","resultados":"06 19 34 43 45 54"},{"Sorteio":1802,"Data":"2016-03-23T03:00:00.000Z","resultados":"02 06 13 14 17 44"},{"Sorteio":1803,"Data":"2016-03-26T03:00:00.000Z","resultados":"04 08 29 38 49 50"},{"Sorteio":1804,"Data":"2016-03-30T03:00:00.000Z","resultados":"20 21 28 48 50 59"},{"Sorteio":1805,"Data":"2016-04-02T03:00:00.000Z","resultados":"17 22 27 31 49 57"},{"Sorteio":1806,"Data":"2016-04-06T03:00:00.000Z","resultados":"11 20 35 42 55 58"},{"Sorteio":1807,"Data":"2016-04-09T03:00:00.000Z","resultados":"01 15 16 22 25 43"},
     {"Sorteio":1808,"Data":"2016-04-13T03:00:00.000Z","resultados":"02 14 20 25 41 45"},
     {"Sorteio":1809,"Data":"2016-04-16T03:00:00.000Z","resultados":"09 12 23 24 46 54"},
     {"Sorteio":1810,"Data":"2016-04-20T03:00:00.000Z","resultados":"01 10 25 43 50 56"},
@@ -107,5 +113,6 @@ export const dados: results[] = [
     {"Sorteio":2572,"Data":"2023-03-11T03:00:00.000Z","resultados":"03 07 15 22 24 50"},
     {"Sorteio":2573,"Data":"2023-03-14T03:00:00.000Z","resultados":"06 26 32 35 37 49"},
     {"Sorteio":2574,"Data":"2023-03-16T03:00:00.000Z","resultados":"12 17 43 44 48 60"},
-    {"Sorteio":2575,"Data":"2023-03-18T03:00:00.000Z","resultados":"04 12 14 41 46 53"}
+    {"Sorteio":2575,"Data":"2023-03-18T03:00:00.000Z","resultados":"04 12 14 41 46 53"},
+    {"Sorteio":2576,"Data":"2023-03-22T03:00:00.000Z","resultados":"29 32 33 35 38 43"},
 ]
