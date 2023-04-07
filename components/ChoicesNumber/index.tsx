@@ -18,7 +18,7 @@ const Index = () => {
 
   const handleGerar = () => {
     const verify = verifyNumber(numberGenerate);
-    setSeemsResults(verify);
+    setSeemsResults(verify.sort((game1 , game2) => game2.Sorteio - game1.Sorteio));
   }
 
   const handleClear = () => {

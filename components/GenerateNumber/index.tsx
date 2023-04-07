@@ -20,7 +20,7 @@ const GenerateNumber = () => {
     const findGenarate = dados.filter(value => value.resultados == genarate);
 
     const verify = verifyNumber(genarate);
-    setSeemsResults(verify);
+    setSeemsResults(verify.sort((game1 , game2) => game2.Sorteio - game1.Sorteio));
     setNumberGenerate(genarate);
    
     if(findGenarate.length >= 1) {
