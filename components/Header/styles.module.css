@@ -50,6 +50,15 @@
     font-weight: 700;
 }
 
+.mostrarResultados{
+  color: #E6EAED;
+  cursor: pointer;
+}
+
+.mostrarResultados:hover{
+  color: #FFB703;
+}
+
 @media (max-width: 450px) {
   .container{
     flex-direction: column;

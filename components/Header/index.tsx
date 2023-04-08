@@ -1,17 +1,27 @@
 import Image from 'next/image';
 import React from 'react';
+import { useRouter } from 'next/router';
 import styles from './styles.module.css';
 import Cover from '../../public/assets/clover.svg';
 import { useAppContext } from '../../context/app';
 import { formatterNumber } from '../../libs/formatter';
 
+
 const Index = () => {
   const {allResults} = useAppContext();
+
+  const route = useRouter()
 
   const formatter = formatterNumber();
 
   const n = allResults?.length
   const lastResult = allResults[n-1].resultados.split(" ");
+
+  console.log(allResults)
+
+  const changePage = () => {
+    route.push('/allresults')
+  }
 
   return (
     <div className={styles.container}>
@@ -30,6 +40,7 @@ const Index = () => {
                 <div className={styles.numberRounded}>{lastResult[4]}</div>
                 <div className={styles.numberRounded}>{lastResult[5]}</div>
             </div>
+            <div className={styles.mostrarResultados} onClick={changePage}>Mostrar todos os resultados</div>
         </div>
     </div>
   )
