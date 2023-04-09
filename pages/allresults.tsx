@@ -23,7 +23,7 @@ const AllResults = () => {
             <h1>Todos os Resultados</h1>
             <div>
                 {allResults.sort((curso1, curso2) => curso2.Sorteio - curso1.Sorteio).map((value) => (
-                    <div className={styles.areaResult}>
+                    <div key={value.Sorteio} className={styles.areaResult}>
                         <p className={styles.subTitleResult}>Concurso - {value.Sorteio} - {formatter.formatterData(value.Data)}</p>
                         <div className={styles.numberArea}>
                             <div className={styles.numberRounded}>{value.resultados.split(" ")[0]}</div>
