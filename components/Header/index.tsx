@@ -17,8 +17,6 @@ const Index = () => {
   const n = allResults?.length
   const lastResult = allResults[n-1].resultados.split(" ");
 
-  console.log(allResults)
-
   const changePage = () => {
     route.push('/allresults')
   }
