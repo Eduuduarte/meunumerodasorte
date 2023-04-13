@@ -15,6 +15,7 @@ const AllResults = () => {
     }
 
     const formatter = formatterNumber();
+
     return (
         <div className={styles.container}>
             <div className={styles.back} onClick={backHome}>
