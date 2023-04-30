@@ -9,13 +9,14 @@ import { formatterNumber } from '../../libs/formatter';
 
 const Index = () => {
   const {allResults} = useAppContext();
+  const allResultsSort = allResults.sort((curso1, curso2) => curso1.Sorteio - curso2.Sorteio)
 
   const route = useRouter()
 
   const formatter = formatterNumber();
 
   const n = allResults?.length
-  const lastResult = allResults[n-1].resultados.split(" ");
+  const lastResult = allResultsSort[n-1].resultados.split(" ");
 
   const changePage = () => {
     route.push('/allresults')
