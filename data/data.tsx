@@ -318,4 +318,7 @@ export const dados: results[] = [
     {"Sorteio":2617,"Data":"2023-08-02T03:00:00.000Z","resultados":"03 14 36 42 43 44"},
     {"Sorteio":2618,"Data":"2023-08-05T03:00:00.000Z","resultados":"06 17 29 35 45 48"},
     {"Sorteio":2619,"Data":"2023-08-09T03:00:00.000Z","resultados":"05 36 39 41 44 50"},
+    {"Sorteio":2620,"Data":"2023-08-12T03:00:00.000Z","resultados":"04 06 13 21 26 28"},
+    {"Sorteio":2621,"Data":"2023-08-16T03:00:00.000Z","resultados":"06 09 14 16 42 47"},
+    {"Sorteio":2622,"Data":"2023-08-19T03:00:00.000Z","resultados":"09 19 22 24 50 60"},
 ]
